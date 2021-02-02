@@ -1,10 +1,4 @@
-[submodule "themes/etch"]
-	path = themes/etch
-	url = https://github.com/LukasJoswiak/etch.git
-[submodule "themes/researcher"]
-	path = themes/researcher
-	url = https://github.com/ojroques/hugo-researcher.git
 [submodule "public"]
 	path = public
-	url = https://github.com/despreston/despreston.github.io.git
-	branch = main
+	url = git@github.com:despreston/despreston.github.io.git
+  branch = master
