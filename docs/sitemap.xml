@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://des.wtf/</loc>
+    <lastmod>2021-02-01T19:43:36-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://des.wtf/learning-from-the-golang-philosophy-as-a-js-programmer/</loc>
+    <lastmod>2021-02-01T19:43:36-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://des.wtf/posts/</loc>
+    <lastmod>2021-02-01T19:43:36-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://des.wtf/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://des.wtf/tags/</loc>
+  </url>
+  
+</urlset>
