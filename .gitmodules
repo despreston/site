@@ -1,7 +1,0 @@
-[submodule "public"]
-	path = public
-	url = git@github.com:despreston/despreston.github.io.git
-  branch = master
-[submodule "themes/etch"]
-	path = themes/etch
-	url = https://github.com/LukasJoswiak/etch.git

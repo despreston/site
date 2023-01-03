@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Backing up vimwiki with rsync</title>
+</head>
+<body>
+  <main>
+    <h1>Backing up vimwiki with rsync</h1>
+    <time>April 30, 2021</time>
+    <p>
+    I use vimwiki to take notes and keep a todo list. Vimwiki stores every page as a separate
+    markdown file in whatever directory you tell it to use. For a long time, my backup strategy for
+    my vimwiki files was Dropbox. Dropbox always seemed like a heavy-handed solution for essentially
+    a dozen text files and I’ve wanted to switch to something simpler for a while. Dropbox is not an
+    approved piece of software at my new job, so that also accelerated my search for a new backup
+    solution.
+    </p>
+    <p>
+    I ended up using rsync with a raspberry pi I keep running 24/7. Because rsync needs to be
+    manually triggered, there’s a bunch of additional tools out there that essentially watch your
+    files for changes and then trigger rsync. Instead of that, I added this to my vimrc:
+    </p>
+    <pre>
+    " after saving anything in ~/vimwiki, sync to rpi for backup
+    au! BufWritePost ~/vimwiki/* silent
+      \ execute "!rsync -avz ~/vimwiki/ des-pi:/home/des/vimwiki" |
+      \ redraw!
+    </pre>
+    <p>
+    In english, whenever a file in my vimwiki directory is written to, it’ll run rsync. This sends
+    my changes to the rpi as soon as I hit save.
+    </p>
+  </main>
+</body>
+</html>

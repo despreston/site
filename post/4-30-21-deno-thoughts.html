@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Deno thoughts</title>
+</head>
+<body>
+  <main>
+    <h1>Deno thoughts</h1>
+    <time>April 30, 2021</time>
+    <p>
+    I recently converted a ~150 SLOC Node project I run in AWS Lambda to Deno (https://deno.land).
+    Deno’s been around for a year or so and seems stable at this point; especially for a 150 line
+    hobby project. Below are some notes I wrote about my experience.
+    </p>
+    <strong>The best parts of typescript</strong>
+    <p>
+    Typescript + Node require some additional steps in order to get setup. With Deno, Typescript is
+    built in and is a first-class component in the Deno ecosystem. It’s no surprise half of the top
+    comments in this thread titled, “Starting a Typescript Project in 2021” are recommendations for
+    Deno. There is no “npm install …” or build scripts to add to your package.json. Install Deno,
+    write some TS, run “deno run mycode.ts” or even “deno run –watch mycode.ts” — no need to install
+    nodemon — and you’re set.
+    </p>
+    <p>
+    Deno uses the Rust-based swc TS compiler. Related Deno Issue about Switching. It is fucking
+    fast, plain and simple. It feels like working on a Go project with respect to compile times.
+    </p>
+    <strong>Tooling is fast</strong>
+    <p>
+    The linter, formatter, and language server are all written in Rust, which, compared to their
+    most popular Node counterparts, are wayyy faster.
+    </p>
+    <strong>Built-in tooling</strong>
+    <p>
+    All the above-mentioned tools that every Node developer ends up npm installing into every
+    repo all come packaged with Deno’s single binary. Having everything come packaged as one binary
+    is one of things I love about Go. Creating a .ts file for a small project without having to
+    setup npm and install 4-5 packages is fantastic. Deno comes with a linter, formatter, REPL,
+    language server, test runner, bundler, compiler (to ship binaries), coverage reporter, and a
+    docs generator. You can even view docs online for any package at https://doc.deno.land.
+    </p>
+    <strong>Standardized code style</strong>
+    <p>
+    Controversial, but one of the things I love the most about Go is that every repo on the internet
+    looks the same. Deno’s formatter formats code using the same rules for everyone, and I think
+    that’s pretty great.
+    </p>
+    <strong>Vetted, stable stdlib</strong>
+    <p>
+    The Deno community has put together a list of packages modeled after the Go stdlib.
+    <a href="https://deno.land/std@0.95.0">Deno stdlib</a>.
+    I love this. It means no more searching github for packages or wondering what the latest web
+    framework you’re supposed to be using is. The <a href="https://deno.land/std@0.95.0/http">http
+    package</a> is a great example.
+    </p>
+  </main>
+</body>
+</html>

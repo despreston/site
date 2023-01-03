@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Yabai</title>
+</head>
+<body>
+  <article>
+    <h1>Yabai</h1>
+    <time>April 19, 2021</time>
+    <p>
+      I’ve recently been using – with much happiness – yabai. Yabai is a tiling window manager for
+      macOS, similar to i3 for Linux. Yabai itself doesn’t handle any of the keyboard shortcuts or
+      make any assumptions about how you use it. Instead, you run it as a service (I’m running it
+      via brew services start yabai) and it exposes an API that you can use other tools to control.
+      The most popular and recommended way of controlling yabai is via skhd by the same author:
+      github.com/koekeishiya. skhd is a dead-simple tool that lets you remap your keys however you
+      want. I’m running it via brew services start skhd.
+    </p>
+    <h2>Notes on Yabai</h2>
+    <h3>SIP</h3>
+    <p>
+      I don’t have SIP (System Integrity Protection) disabled. Disabling SIP let’s yabai do more stuff
+      like control macOS spaces. I don’t use spaces and I didn’t feel the need to have any of the
+      other features that require disabling SIP.
+    </p>
+    <h3>Limelight</h3>
+    <p>
+      If you disable SIP, you have the option to enable a border around the window that has focus
+      in yabai. It makes it easier to see which app you’re focused on when you’re flipping through
+      with your keyboard shortcuts. If you don’t have SIP disabled, there’s a nifty little tool (again
+      by koekeishiya) called limelight that’ll do the same thing. I guess limelight is actually old
+      code that used to be in yabai? Weird that old code wouldn’t require disabling security
+      protections and new code would, but whatever. The border color and thickness and all that are
+      configurable. I don’t really want a border around my windows so I don’t use this.
+    </p>
+    <h2>Useful links</h2>
+    <ul>
+      <li><a href="https://github.com/koekeishiya/yabai/wiki">yabai wiki</a></li>
+      <li><a href="https://github.com/koekeishiya/yabai/blob/master/examples/yabairc">example .yabairc</a></li>
+      <li><a href="https://github.com/koekeishiya/yabai/blob/master/examples/skhdrc">example skhdrc</a></li>
+      <li><a href="https://github.com/koekeishiya/dotfiles/blob/master/yabai/yabairc">koekeishiya's .yabairc</a></li>
+      <li><a href="https://github.com/koekeishiya/dotfiles/blob/master/skhd/skhdrc">koekeishiya's skhdrc</a></li>
+      <li><a href="https://raw.githubusercontent.com/despreston/dotfiles/master/.yabairc">my .yabairc</a></li>
+      <li><a href="https://raw.githubusercontent.com/despreston/dotfiles/master/skhdrc">my skhdrc</a></li>
+    </ul>
+    <h2>Notes on my configs</h2>
+    <h3>yabai</h3>
+    <p>
+      I have some app-specific configurations at the top of my .yabairc. For example:
+      <p><code>yabai -m rule --add app="^Slack$" display=2 manage=off</code></p>
+      This tells yabai I don’t want Slack to be
+      resized and snapped into place, and that I want it to be opened on the second screen (my laptop’s
+      screen).
+    </p>
+    <h3>skhd</h3>
+    <p>
+      Toggling whether a window is floated or not is highly recommended. Some times you just want
+      to move a window around without it being snapped into position by yabai. For instance, if a
+      dialog window or something pops up I don’t want that taking up 25% of my screen. I’ll press
+      shift + alt - f to make it float.
+    </p>
+  </article>
+</body>
+</html>
