@@ -11,13 +11,14 @@ cat > $FILE <<- EOM
 <head>
     <meta charset="utf-8">
     <title>$TITLE</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
   <main>
     <h1>$TITLE</h1>
     <time>`date +'%B %d, %Y'`</time>
   </main>
-  <a href="../index.html">More posts</a>
+  <a id="more-posts" href="../index.html">More posts</a>
 </body>
 </html>
 EOM
