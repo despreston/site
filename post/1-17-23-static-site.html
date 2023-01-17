@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>An alternative to static site generators</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <main>
+    <h1>An alternative to static site generators</h1>
+    <time>January 17, 2023</time>
+    <p>
+    Up until a week ago this site was created with the help of the static site generator <a href="https://gohugo.io/">Hugo</a>.
+    That worked decently for a year or so, but every time I would come back to write something after
+    a long break I'd need to reread the docs to do absolutely anything.
+    </p>
+    <p>
+    I'd like to offer <a href="https://github.com/despreston/site">my alternative</a> to Hugo,
+    Jekyll, et al. It's called, HTML.
+    </p>
+    <p>
+    All my content is written in plain html. I use a bash script that takes two inputs: file name
+    and title, and generates a new file based on a little HTML template.
+    </p>
+    <p>
+    Styling is a done with a single CSS file.
+    </p>
+    <p>
+    <strong>Some downsides, maybe?</strong>
+    <ul>
+      <li>HTML takes slightly longer to write than markdown. Although maybe not since I'm always forgetting markdown syntax.</li> 
+      <li>Need to manually add a link to the post in index.html. Could probably automate this at some point.</li>
+    </ul>
+    <p>
+    We'll see how long this lasts.
+    </p>
+  </main>
+  <a id="more-posts" href="../index.html">More posts</a>
+</body>
+</html>
